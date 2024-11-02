@@ -1,0 +1,62 @@
+/* App.css */
+
+/* General styles for the app container */
+.app-container {
+    position: relative; /* Set position for relative children */
+    overflow: hidden; /* Prevent overflow from the main container */
+}
+
+/* Styles for Carousel Component */
+.carousel {
+    position: relative; /* Allow z-index control */
+    z-index: 20; /* Higher z-index to ensure it's on top */
+}
+
+/* Styles for TwoSections Component */
+.two-sections {
+    position: relative; /* Allow z-index control */
+    z-index: 15; /* Adjust as needed */
+}
+
+/* Styles for BackgroundVideo Component */
+.background-video {
+    position: relative; /* Allow z-index control */
+    z-index: 10; /* Lower z-index for background */
+}
+
+/* Styles for FourCards Component */
+.four-cards {
+    position: relative; /* Allow z-index control */
+    z-index: 5; /* Adjust as needed */
+}
+
+/* Styles for ThreeCards Component */
+.three-cards {
+    position: relative; /* Allow z-index control */
+    z-index: 5; /* Adjust as needed */
+}
+
+/* Ensure content within cards doesn't overflow */
+.card-wrapper {
+    max-height: 300px; /* Set a max height for cards */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds */
+}
+
+/* Example styles for the cards */
+.card {
+    background-color: white; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    overflow: hidden; /* Ensure no overflow from card content */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .carousel,
+    .two-sections,
+    .background-video,
+    .four-cards,
+    .three-cards {
+        z-index: 10; /* Adjust z-index for mobile if needed */
+    }
+}
